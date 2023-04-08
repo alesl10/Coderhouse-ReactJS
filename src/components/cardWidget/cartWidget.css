@@ -1,0 +1,18 @@
+.cart-widget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}   
+
+.cart-widget > img {
+    width: 40px;
+    height: 40px;
+}
+
+.cart-widget > span {
+    text-decoration: solid;
+    color: black;
+font-weight: bold;
+
+}

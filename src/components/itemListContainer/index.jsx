@@ -1,34 +1,37 @@
-import products from "../../mocks/products";
+import Products from "../../mocks/Products";
 import { useEffect, useState } from "react";
 import ItemList from "../itemList";
+import './itemListContainer.css';
 
-function ItemListContainer({ isCategoryRoute, CategoryId }) {
-    const [listaProdu, setListaProdu] = useState([]);
+function ItemListContainer({ categoryId, isCategoryRoute }) {
+
+    const [products, setProducts] = useState([]);
+    console.log(isCategoryRoute)
 
     useEffect(() => {
+
         const productsPromise = new Promise((resolve, reject) =>
-            setTimeout(() => resolve(products), 2000)
+            setTimeout(() => resolve(Products), 2000)
         );
-        
+
         productsPromise
             .then((response) => {
-                if (isCategoryRoute) {
-                    const productsFiltered = response.filter(
-                        (elem) => elem.category === CategoryId
-                    );
-
-                    setListaProdu(productsFiltered);
-                } else {
-                    setListaProdu(response);
-                }
+                if(isCategoryRoute) {
+                const productsFilter = response.filter(
+                    (product) => product.categoria === categoryId);
+                setProducts(productsFilter);
+            }else {
+                setProducts(response)
+            }
             })
             .catch((err) => console.log(err));
-    }, [CategoryId]);
+    }, [categoryId]);
 
+    console.log(products);
 
     return (
-        <main>
-            <ItemList productos={listaProdu} />
+        <main className="contenedorProducts">
+            <ItemList products={products} />
         </main>
     )
 }

@@ -1,3 +1,6 @@
+import hornito from '../assets/images/aparatos/hornillo.png'
+
+
 export default [
     {
         id: 1,
@@ -372,6 +375,7 @@ export default [
     },
     {
         id: 52,
+        img: hornito,
         categoria: "aparato",
         stock: 10,
         precio: 6500,
