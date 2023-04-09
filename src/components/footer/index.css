@@ -3,6 +3,8 @@ footer {
     bottom: 0px;
     background-color: beige;
     margin-top: auto;
+    border: solid 2rem beige;
+
 }
 
 .footer-nav {

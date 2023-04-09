@@ -1,28 +1,34 @@
 import { useState } from "react"
 import ItemDetail from "../itemDetail"
 import { useEffect } from "react";
-import Products from "../../mocks/Products";
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import { useParams } from "react-router-dom";
 
 
-function ItemDetailContainer({itemId}) {
-    const [ products, setProducts] = useState([]);
+function ItemDetailContainer() {
+    const [products, setProducts] = useState([]);
+    const params = useParams();
+    const [loading, setLoading] = useState(true)
+
 
     useEffect(() => {
-        const productsPromise = new Promise((resolve, reject) =>
-        setTimeout(() => resolve(Products), 1000)
-        );
-        productsPromise.then((resp) => {
-            const productSearch = resp.find(elem => elem.id == itemId);
-            setProducts(productSearch);
-        })
-        .catch((err) => console.log(err));
-    }, [itemId]);
+        const db = getFirestore();
+        const itemRef = doc(db, "products", params.id);
 
-
+        getDoc(itemRef)
+            .then((result) => {
+                if (result.exists()) {
+                    setProducts({ id: result.id, ...result.data() });
+                    setLoading(false);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, []);
 
     return (
-        <div>           
-            <ItemDetail product={products}/>
+        <div>
+            {loading ? <h2>Cargando...</h2> : "" }
+            <ItemDetail product={products} />
         </div>
     )
 }

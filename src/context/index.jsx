@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 export function GlobalProvider({ children }) {
     const [productsAdded, setProductsAdded] = useState([]);
-console.log(productsAdded)
+    console.log(productsAdded)
     function onAdd(product, quantity) {
         const isAlreadyAdded = isInCart(product);
 
@@ -17,8 +17,8 @@ console.log(productsAdded)
                 quantity: productToModify.quantity + quantity
             };
 
-            setProductsAdded((prevState) => prevState.map((productsAdded) => 
-            productsAdded.id === product.id ? productModified : productsAdded
+            setProductsAdded((prevState) => prevState.map((productsAdded) =>
+                productsAdded.id === product.id ? productModified : productsAdded
             ));
         } else {
             setProductsAdded((prevState) =>
@@ -30,13 +30,20 @@ console.log(productsAdded)
         return productsAdded.some((productsAdded) => productsAdded.id === product.id);
     }
 
-function removeItem(itemId) {}
-function clear() {}
+    function removeItem(id) {
+        const remove = productsAdded.filter((product) => product.id !== id);
+        setProductsAdded(remove);
+    }
+    function clearCart() {
+        setProductsAdded([]);
+    }
 
     const value = {
         productsAdded,
         onAdd,
+        removeItem,
+        clearCart,
     }
 
-    return <Context.Provider value={{ productsAdded, onAdd }}>{children}</Context.Provider>;
+    return <Context.Provider value={{productsAdded, onAdd, removeItem, clearCart }}>{children}</Context.Provider>;
 }

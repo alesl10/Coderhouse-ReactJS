@@ -3,11 +3,11 @@ import ItemCount from '../ItemCount'
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './itemDetail.css';
-import {Context} from '../../context'
+import { Context } from '../../context'
 
 
 function ItemDetail({ product }) {
-const { onAdd } = useContext(Context);
+    const { onAdd } = useContext(Context);
     const [added, setAdded] = useState(0);
 
     function onAddProducto(cant) {

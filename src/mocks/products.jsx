@@ -1,4 +1,16 @@
 import hornito from '../assets/images/aparatos/hornillo.png'
+import aparato1 from '../assets/images/aparatos/aromatizadoranalogicocontoquesaphirus.jpg'
+import aparato2 from '../assets/images/aparatos/saphirus-dispensador-linea-deco-golden-sand.jpg'
+import aerobernar from '../assets/images/aerosoles/aerosol-saphirus-bergamota-y-naranja-430x430.jpg'
+import aerochoconar from '../assets/images/aerosoles/aerosol-saphirus-chocolate-y-naranja-430x430.jpg'
+import aerociru from '../assets/images/aerosoles/aerosol-saphirus-ciruela-430x430.jpg'
+import aerolava from '../assets/images/aerosoles/aerosol-saphirus-lavanda-y-te-verde-430x430.jpg'
+import aeropera from '../assets/images/aerosoles/aerosol-saphirus-pera-y-durazno-430x430.jpg'
+import aeropome from '../assets/images/aerosoles/aerosol-saphirus-pomelo-rosado-430x430.jpg'
+import aerovain from '../assets/images/aerosoles/aerosol-saphirus-vainilla-tonka-430x430.jpg'
+import aerocafe from '../assets/images/aerosoles/cafe-au-chocolate-430x430.jpg'
+import aerosand from '../assets/images/aerosoles/sandia-pepino.jpg'
+import aeroanti from '../assets/images/aerosoles/saphirus-aerosoles-antitabaco-430x430.jpg'
 
 
 export default [
@@ -268,6 +280,7 @@ export default [
     // aerosoles
     {
         id: 40,
+        img: aerovain,
         categoria: "aerosol",
         stock: 10,
         fragancia: "Vainilla",
@@ -277,88 +290,99 @@ export default [
     },
     {
         id: 41,
+        img: aerobernar,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Bergamota y naranja",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 42,
+        img: aerochoconar,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Chocolate y naranja",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 43,
+        img: aerociru,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Ciruela",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 44,
+        img: aerolava,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Lavanda y te verde",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 45,
+        img: aeropera,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Pera y durazno",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 46,
+        img: aeropome,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Pomelo rosado",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 47,
+        img: aerocafe,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Cafe con chocolate",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 48,
+        img: aerosand,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Sandia y pepino",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
     {
         id: 49,
+        img: aeroanti,
         categoria: "aerosol",
         stock: 10,
-        fragancia: "Vainilla",
+        fragancia: "Antitabaco",
         precio: 450,
         descripcion: "aerosol",
         detalle: "Para perfumar tus espacios y ambientes del hogar."
     },
+    
     // aparatos
     {
         id: 50,
+        img: aparato1,
         categoria: "aparato",
         stock: 10,
         precio: 1980,
@@ -367,6 +391,7 @@ export default [
     },
     {
         id: 51,
+        img: aparato2,
         categoria: "aparato",
         stock: 10,
         precio: 1980,

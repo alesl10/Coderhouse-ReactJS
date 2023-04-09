@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 
 
 function ItemRoot() {
-    const parametros = useParams();
 
     return (
         <main>
-            <ItemDetailContainer itemId={parametros.id} />
+            <ItemDetailContainer />
         </main>
     )
 }

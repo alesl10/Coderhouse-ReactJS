@@ -1,0 +1,33 @@
+.contenedorCarrito{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.descCarrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgCart{
+    width: 10rem;
+}
+
+.finalCart{
+    background-color: white;
+    border: solid 2px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cartButton{
+    margin: 2px;
+}

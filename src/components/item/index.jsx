@@ -12,9 +12,9 @@ function Item({ product }) {
 
         <Col xs={3} className="cardPers">
             <img className='imgList' src={product.img} alt="imagen de producto" />
-            <p>{product.categoria} </p>
+            <p>{product.descripcion} </p>
             <p>{product.fragancia}</p>
-            <p className="producDescription">{product.descripcion}</p>
+            <p className="producDescription">${product.precio}</p>
             <Button variant="dark"><NavLink to={`/item/${product.id}`}>Ver detalle</NavLink></Button>
 
 
