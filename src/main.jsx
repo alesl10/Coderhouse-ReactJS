@@ -10,6 +10,8 @@ import Root from './routes/root'
 import ItemRoot from './routes/Item'
 import Layout from '../src/components/Layout'
 import CartRoot from '../src/components/Cart'
+import Checkout from './routes/checkout';
+import ContactRoot from './routes/contact';
 
 
 import { initializeApp } from "firebase/app";
@@ -48,12 +50,12 @@ const router = createBrowserRouter([
         element: <CartRoot />,
       },
       {
-        path: "/checkout",
-        element: <div>Hello world!</div>,
+        path: "/Checkout",
+        element: <Checkout />,
       },
       {
         path: "/contact",
-        element: <div>Hello world!</div>,
+        element: <ContactRoot />,
       },
     ],
   },

@@ -1,5 +1,4 @@
 import ItemDetailContainer from "../components/itemDetailContainer";
-import { useParams } from "react-router-dom";
 
 
 function ItemRoot() {

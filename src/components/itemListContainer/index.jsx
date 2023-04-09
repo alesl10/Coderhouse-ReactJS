@@ -47,8 +47,8 @@ function ItemListContainer({ categoryId, isCategoryRoute }) {
 
     return (
         <main className="contenedorProducts">
-{loading ? <h2>Cargando...</h2> : ""}
-            <ItemList products={products} />
+            {loading ? <h2>Cargando...</h2> :
+                <ItemList products={products} />}
         </main>
     )
 }

@@ -1,0 +1,16 @@
+.contact-title {
+    font-size: xx-large;
+    color: #021e36;
+    font-style: bold;
+    text-align: center;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    max-width: 100%;
+    max-height: 50%;
+}
