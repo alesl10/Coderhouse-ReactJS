@@ -20,9 +20,10 @@ function ItemDetailContainer() {
                 if (result.exists()) {
                     setProducts({ id: result.id, ...result.data() });
                     setLoading(false);
-                }
+                }else{
+                throw new Error}
             })
-            .catch((err) => console.log(err));
+            .catch((err) => alert("producto no encontrado"));
     }, []);
 
     return (

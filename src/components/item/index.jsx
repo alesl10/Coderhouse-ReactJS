@@ -15,7 +15,7 @@ function Item({ product }) {
             <p>{product.descripcion} </p>
             <p>{product.fragancia}</p>
             <p className="producDescription">${product.precio}</p>
-            <Button variant="dark"><NavLink to={`/item/${product.id}`}>Ver detalle</NavLink></Button>
+            <Button variant="dark"><NavLink className='botonItem' to={`/item/${product.id}`}>Ver detalle</NavLink></Button>
 
 
 

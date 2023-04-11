@@ -1,9 +1,14 @@
 main{
     background-color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
 
 .checkout{
     text-align: center;
     font-style: solid;
+}
+
+input{
+    width: 50%;
 }

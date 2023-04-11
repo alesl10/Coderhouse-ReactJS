@@ -1,7 +1,8 @@
 import { useContext, useState } from "react"
+import Button from 'react-bootstrap/Button';
 import ItemCount from '../ItemCount'
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './itemDetail.css';
 import { Context } from '../../context'
 
@@ -38,9 +39,14 @@ function ItemDetail({ product }) {
                             )}
                             <div>
                                 {added >= 1 && (
-                                    <Link to="/cart">
-                                        <button>Terminar compra</button>
-                                    </Link>
+                                    <div>
+                                        <NavLink to="/cart">
+                                            <Button className="buttonDetail">Ir al carrito</Button>
+                                        </NavLink>
+                                        <NavLink to="/">
+                                            <Button className="buttonDetail">Seguir comprando</Button>
+                                        </NavLink>
+                                    </div>
                                 )}
                             </div>
                         </div>

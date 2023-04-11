@@ -12,6 +12,7 @@
 
 .producDescription{
     font-size: medium    ;
+
 }
 
 .imgList{
@@ -19,4 +20,9 @@
     margin: 0 auto;
     border: solid 1px black;
     background-color: white;
+}
+
+.botonItem{
+    text-decoration: none;
+    color: white;
 }

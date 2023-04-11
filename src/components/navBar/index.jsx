@@ -13,7 +13,7 @@ import './navbar.css'
 function NavBar() {
 
     return (
-        <Navbar className='navbarPers' >
+        <Navbar bg="ligth" className='navbarPers' >
             <Container>
                 <Navbar.Brand >
                     <NavLink to={'/'}><img
@@ -22,32 +22,28 @@ function NavBar() {
                         width="150"
                         height="150"
                     /></NavLink>
-                    <NavLink to={'/'}>Saphirus.Bri</NavLink>
+                    <NavLink className="navTittleName" to={'/'}>Saphirus.Bri</NavLink>
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link >
-                            <NavLink to={'/'}>Inicio</NavLink>
+                            <NavLink className="navTittle" to={'/contact'}>Contacto</NavLink>
 
                         </Nav.Link>
-                        <Nav.Link >
-                            <NavLink to={'/contact'}>Contacto</NavLink>
-
-                        </Nav.Link>
-                        <NavDropdown title="Fragancias" id="basic-nav-dropdown">
+                        <NavDropdown className="navTittle" title="Fragancias" id="basic-nav-dropdown">
                             <NavDropdown.Item >
-                                <NavLink to={'/category/aerosol'}>Aerosoles</NavLink>
+                                <NavLink className="navTittle" to={'/category/aerosol'}>Aerosoles</NavLink>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <NavLink to={'/category/esencia'}>Esencias</NavLink>
+                                <NavLink className="navTittle" to={'/category/esencia'}>Esencias</NavLink>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <NavLink to={'/category/textil'}>Textil</NavLink>
+                                <NavLink className="navTittle" to={'/category/textil'}>Textil</NavLink>
 
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item >
-                                <NavLink to={'/category/aparato'}>Aparatos</NavLink>
+                                <NavLink className="navTittle" to={'/category/aparato'}>Aparatos</NavLink>
 
                             </NavDropdown.Item>
                         </NavDropdown>

@@ -38,6 +38,11 @@ export function GlobalProvider({ children }) {
         setProductsAdded([]);
     }
 
+    function total() {
+        const cartFinal = productsAdded.reduce((acc, product) => acc + (product.precio * product.quantity), 0);
+        return cartFinal;
+    }
+
     const value = {
         productsAdded,
         onAdd,
@@ -45,5 +50,5 @@ export function GlobalProvider({ children }) {
         clearCart,
     }
 
-    return <Context.Provider value={{productsAdded, onAdd, removeItem, clearCart }}>{children}</Context.Provider>;
+    return <Context.Provider value={{productsAdded, onAdd, removeItem, clearCart, total }}>{children}</Context.Provider>;
 }

@@ -7,18 +7,12 @@ import Button from 'react-bootstrap/Button';
 
 function Cart() {
 
-    const { productsAdded, removeItem, clearCart } = useContext(Context);
+    const { productsAdded, removeItem, clearCart, total } = useContext(Context);
 
     function totalProduct(product) {
         const precioParcial = product.precio * product.quantity;
         return precioParcial;
     }
-
-    function total() {
-        const cartFinal = productsAdded.reduce((acc, product) => acc + (product.precio * product.quantity), 0);
-        return cartFinal;
-    }
-
 
     return (
         <div>
@@ -35,7 +29,7 @@ function Cart() {
                                     <span> Cantidad: {product.quantity} - </span>
                                     <span> <b>Precio unidad $ {product.precio} |  $ {totalProduct(product)}</b> </span>
                                 </div>
-                                <button onClick={() => removeItem(product.id)}>Eliminar producto</button>
+                                <Button onClick={() => removeItem(product.id)}>Eliminar producto</Button>
                             </div>
                         )
                     }
@@ -43,8 +37,10 @@ function Cart() {
                     <div className="finalCart">
                         <h2>Precio total a pagar: $ {total()}</h2>
                         <div >
-                            <NavLink to="/checkout"><button className="cartButton">Terminar compra</button></NavLink>
-                            <button className="cartButton" onClick={() => clearCart()}>Vaciar carrito</button>
+                            <NavLink to="/checkout"><Button className="cartButton">Terminar compra</Button></NavLink>
+                            <Button className="cartButton" onClick={() => clearCart()}>Vaciar carrito</Button>
+                            <NavLink to="/"><Button className="cartButton">Seguir comprando</Button></NavLink>
+
                         </div>
                     </div>
                 </main>
